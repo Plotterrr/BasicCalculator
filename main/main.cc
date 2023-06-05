@@ -1,5 +1,5 @@
 #include <iostream>
-#include "stage1/main/Calculation.h"
+#include "Calculation.h"
 
 int main() {
 
@@ -37,7 +37,7 @@ int main() {
         std::cin >> op;
 
         if(!cal.validOp(op)){
-            std::cout << "Invalid operation." << std::endl;
+            std::cout << "Invalid operation.";
             continue;
         }else {
 
