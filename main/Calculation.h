@@ -18,11 +18,11 @@ public:
 
     int calculate(char op,int num1,int num2);
 
-    int sum(int num1, int num2);
-    int difference(int num1, int num2);
-
-
-
+    int sum(int num1, int num2);//add
+    int difference(int num1, int num2);//substract for behavior
+    // you cannot push your responsibility to your customers
+    // earn your trust, DO NOT DO THAT
+    // MY FAULT even though it's not yours, take the responsibility
 };
 
 

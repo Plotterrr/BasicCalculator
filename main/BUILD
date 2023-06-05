@@ -1,21 +1,23 @@
-load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("@rules_cc//cc:defs.bzl","cc_library" ,"cc_binary", "cc_test")
 
 cc_library(
     name = "Calculation",
-    src = ["Calculation.cc"],
+    srcs = ["Calculation.cc"],
     hdrs = ["Calculation.h"],
 )
 
 cc_binary(
     name = "main",
-    size="small",
     srcs = ["main.cc"],
-    deps=[":Calculation","@com_google_googletest//g:test_main"],
+    deps=[":Calculation"],
 
 )
 
 cc_test(
-    name ="",
-    srcs=[],
-    deps=[],
+ name = "test",
+ size = "small",
+ srcs = ["test.cpp"],
+ deps = [":Calculation",":main","@com_google_googletest//:gtest_main"],
+# deps = ["@com_google_googletest//:gtest_main"],
 )
+
