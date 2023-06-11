@@ -10,19 +10,19 @@
 class Calculation {
 public:
     //check if a number is 999
-    bool proceed(int num);
+    bool isQualified(double num);
 
-    bool is_number(const std::string& s);
+
+    bool isNumber(const std::string& s);
 
     bool validOp(char op);
 
-    int calculate(char op,int num1,int num2);
+    double calculate(char op,double num1,double num2);
+    bool isValid(double num);
 
-    int sum(int num1, int num2);//add
-    int difference(int num1, int num2);//substract for behavior
-    // you cannot push your responsibility to your customers
-    // earn your trust, DO NOT DO THAT
-    // MY FAULT even though it's not yours, take the responsibility
+
+    double add(double num1, double num2);
+    double substract(double num1, double num2);
 };
 
 
